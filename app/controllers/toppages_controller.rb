@@ -5,10 +5,10 @@ class ToppagesController < ApplicationController
     #binding.pry
     if params[:genre]
     #そのジャンルのPost一覧を取得するコード
-      @posts = Post.where(genre: params[:genre]).order(id: :desc).page(params[:page])
+      @posts = Post.where(genre: params[:genre]).order(id: :desc).page(params[:page]).per(3)
     else
     #全てのPost一覧を取得するコード
-      @posts = current_user.posts.order(id: :desc).page(params[:page])
+      @posts = current_user.posts.order(id: :desc).page(params[:page]).per(3)
     end
     
     
