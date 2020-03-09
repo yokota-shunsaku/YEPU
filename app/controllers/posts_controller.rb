@@ -2,6 +2,12 @@ class PostsController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:destroy]
   
+  def index
+    if logged_in?
+      @post = current_user.posts.build  # form_with 用
+    end
+  end
+  
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
