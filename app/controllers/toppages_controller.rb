@@ -8,7 +8,7 @@ class ToppagesController < ApplicationController
       @posts = Post.where(genre: params[:genre]).order(id: :desc).page(params[:page]).per(3)
     else
     #全てのPost一覧を取得するコード
-      @posts = current_user.posts.order(id: :desc).page(params[:page]).per(3)
+      @posts = current_user.feed_posts.order(id: :desc).page(params[:page]).per(3)
     end
     
     
