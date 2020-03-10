@@ -25,3 +25,17 @@
     </div>
   </nav>
 </header>
+  
+  
+<% if logged_in? %>
+  <body style="padding-bottom:4.5rem;" class="mb-4">
+    <nav class="navbar navbar-expand-sm navbar-light fixed-bottom" style="background-color: #ffc0cb;">
+      <div class="collapse navbar-collapse justify-content-center">
+        <a class="navbar-brand" href="/posts"><i class="far fa-edit"></i>今日のキレイをメモする！</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+  </body>
+<% end %>

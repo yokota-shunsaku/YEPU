@@ -11,12 +11,11 @@
           <% if post.image? %>
             <%= image_tag post.image.url %>
           <% end %>
-          <p class="mb-0"><%= post.content %><%= render 'favorites/like_button', post: post %></p>
+          <p class="mb-0"><%= post.content %></p>
         </div>
-        <div>
-          <% if current_user == post.user %>
-            <%= link_to "Delete", post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
-          <% end %>
+        <div class="btn-toolbar">
+          <p><%= render 'favorites/like_button', post: post %></p>
+          <p><%= render 'posts/delete_button', post: post %></p>
         </div>
       </div>
     </li>

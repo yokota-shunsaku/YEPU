@@ -6,22 +6,18 @@
     
     
     <%= form_with(url: root_path, method: :get, local: true) do |f| %>
-    <%= f.select :genre, ['eat', 'exercise', 'beauty', 'feed', 'all'], {include_blank: '選択ボックス'}, class: 'form-control' %>
+    <%= f.select :genre, ['eat', 'exercise', 'beauty', 'Myタイムライン', 'Allジャンル'], {include_blank: '表示選択'}, class: 'form-control' %>
       <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
     <% end %>
     
-    <%= form_with(url: root_path, method: :get, local: true) do |f| %>
-      <%= f.submit '全ジャンル表示', class: 'btn btn-primary btn-block' %>
-    <% end %>
     
-    
-    <p><%= link_to '投稿する', posts_path %></p>
   </div>
 <% else %>
-  <div class="center jumbotron">
+  <div class="center jumbotron" style="background: url(<%= asset_path "b093.jpg" %>);">
     <div class="text-center">
-      <h1>「キレイ」も「悩み」もシェアするなら？</h1>
-      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+      <h1>「キレイ」も「悩み」もシェアするなら？</h1><br><br><br>
+      <a class="navbar-brand" href="/signup"><i class="far fa-edit"></i> 今日のキレイをメモする <i class="far fa-edit"></i></a><br>
+      <a class="navbar-brand" href="/signup"><i class="far fa-lightbulb"></i> みんなのメモで悩みを解消 <i class="far fa-lightbulb"></i></a>
     </div>
   </div>
 <% end %>

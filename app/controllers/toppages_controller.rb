@@ -9,7 +9,7 @@ class ToppagesController < ApplicationController
       #そのジャンルのPost一覧を取得するコード
         @posts = Post.where(genre: params[:genre]).order(id: :desc).page(params[:page]).per(3)
        
-      elsif params[:genre] == 'all'
+      elsif params[:genre] == 'Allジャンル'
       #全てのPost一覧を取得するコード
         @posts = Post.order(id: :desc).page(params[:page]).per(3)
         
