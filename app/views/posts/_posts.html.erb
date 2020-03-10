@@ -11,7 +11,7 @@
           <% if post.image? %>
             <%= image_tag post.image.url %>
           <% end %>
-          <p class="mb-0"><%= post.content %></p>
+          <p class="mb-0"><%= post.content %><%= render 'favorites/like_button', post: post %></p>
         </div>
         <div>
           <% if current_user == post.user %>
