@@ -1,6 +1,6 @@
 class ToppagesController < ApplicationController
   def index
-    #if logged_in?
+    if logged_in?
     
     #binding.pry
     if params[:genre]
@@ -12,7 +12,7 @@ class ToppagesController < ApplicationController
     end
     
     
-    #end
+    end
   end
   
   
