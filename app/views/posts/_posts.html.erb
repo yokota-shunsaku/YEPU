@@ -11,8 +11,8 @@
           <% if post.image? %>
             <%= image_tag post.image.url %>
           <% end %>
-          <p class="mb-0"><%= post.content %></p>
         </div>
+        <div class="text-break mb-0"><%= simple_format( post.content ) %></div>
         <div class="btn-toolbar">
           <p><%= render 'favorites/like_button', post: post %></p>
           <p><%= render 'posts/delete_button', post: post %></p>

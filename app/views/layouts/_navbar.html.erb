@@ -1,41 +1,59 @@
+<%= stylesheet_link_tag "custom", :media => "all" %>
+
 <header class="mb-4">
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">YEPU</a>
+  <nav class="navbar navbar-expand-sm navbar-dark custom-hamburger" style="background-color: #ffe4e1;">
+    <a class="navbar-brand text-dark" href="/">YEPU</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div class="tatan">
       <ul class="navbar-nav">
         <% if logged_in? %>
-          <li class="nav-item"><%= link_to 'Users', users_path, class: 'nav-link' %></li>
+        
+        
+          <li class="nav-item">
+          <%= link_to likes_user_path(@current_user), class: 'nav-link' do %>
+            <i class="far fa-heart"></i> お気に入り 
+          <% end %>
+          </li>
+          <li class="nav-item">
+          <%= link_to users_path, class: 'nav-link' do %>
+            <i class="far fa-user-circle"></i> ユーザー
+          <% end %>
+          </li>
+          
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><%= current_user.name %></a>
             <ul class="dropdown-menu dropdown-menu-right">
-              <li class="dropdown-item"><%= link_to 'My profile', user_path(current_user) %></li>
+              <li class="dropdown-item"><%= link_to 'Myプロフィール', user_path(current_user) %></li>
               <li class="dropdown-divider"></li>
-              <li class="dropdown-item"><%= link_to 'Logout', logout_path, method: :delete %></li>
+              <li class="dropdown-item"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
             </ul>
           </li>
+        
         <% else %>
           <li class="nav-item"><%= link_to 'ログイン', login_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'サインアップ', signup_path, class: 'nav-link' %></li>
         <% end %>
       </ul>
+      </div>
     </div>
   </nav>
+  <link rel="stylesheet" href="minimum.css">
 </header>
   
   
-<% if logged_in? %>
+<!--
   <body style="padding-bottom:4.5rem;" class="mb-4">
     <nav class="navbar navbar-expand-sm navbar-light fixed-bottom" style="background-color: #ffc0cb;">
       <div class="collapse navbar-collapse justify-content-center">
-        <a class="navbar-brand" href="/posts"><i class="far fa-edit"></i>今日のキレイをメモする！</a>
+        <a class="navbar-brand" href="/posts"><i class="far fa-edit"></i>今日のキレイをメモする<i class="far fa-edit"></i></a>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
   </body>
-<% end %>
+-->

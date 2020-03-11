@@ -1,0 +1,22 @@
+.tatan .navbar-nav .nav-item .nav-link {
+    color: #a26767 !important;
+}
+
+.text-dark {
+    color: #a94eaf!important;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}

@@ -1,17 +1,26 @@
 <% if logged_in? %>
+<div class="container">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-2">
+    <%= form_with(url: root_path, method: :get, local: true) do |f| %>
+    <%= f.select :genre, ['eat', 'exercise', 'beauty', 'Myタイムライン', 'Allジャンル'], {include_blank: 'ジャンル選択'}, class: 'form-control' %>
+      <%= f.submit '表示する', class: 'btn btn-primary btn-block' %>
+    <% end %>
+    <br>
+    <a class="w-50" style="background-color: #ffe4e1;" href="/posts"><i class="far fa-edit"></i> メモする <i class="far fa-edit"></i></a><br>
+    </div>
+    
+    
+    <div class="col-sm-10">
       <%= render 'posts/posts', posts: @posts %>
     </div>
     
     
-    <%= form_with(url: root_path, method: :get, local: true) do |f| %>
-    <%= f.select :genre, ['eat', 'exercise', 'beauty', 'Myタイムライン', 'Allジャンル'], {include_blank: '表示選択'}, class: 'form-control' %>
-      <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
-    <% end %>
+    
     
     
   </div>
+</div>
 <% else %>
   <div class="center jumbotron" style="background: url(<%= asset_path "b093.jpg" %>);">
     <div class="text-center">
