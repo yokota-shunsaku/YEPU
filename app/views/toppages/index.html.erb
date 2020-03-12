@@ -1,21 +1,26 @@
 <% if logged_in? %>
 <div class="container">
   <div class="row">
-    <div class="col-sm-2">
-    <%= form_with(url: root_path, method: :get, local: true) do |f| %>
-    <%= f.select :genre, ['eat', 'exercise', 'beauty', 'Myタイムライン', 'Allジャンル'], {include_blank: 'ジャンル選択'}, class: 'form-control' %>
-      <%= f.submit '表示する', class: 'btn btn-primary btn-block' %>
-    <% end %>
-    <br>
-    <a class="w-50" style="background-color: #ffe4e1;" href="/posts"><i class="far fa-edit"></i> メモする <i class="far fa-edit"></i></a><br>
+    <div class="col-sm">
+      <div class="jenre">
+        <%= form_with(url: root_path, method: :get, local: true) do |f| %>
+        <%= f.select :genre, ['eat', 'exercise', 'beauty', 'Myタイムライン', 'Allジャンル'], {include_blank: 'ジャンル選択'}, class: 'form-control' %>
+          <%= f.submit '表示する', class: 'btn btn-primary btn-block' %>
+        <% end %>
+      </div>
     </div>
     
     
-    <div class="col-sm-10">
+    <div class="col-sm">
+      <p class="form-link-memo">
+        <%= link_to signup_path, class: 'kirei-memo' do %>
+          <i class="far fa-edit"></i> メモする <i class="far fa-edit"></i>
+        <% end %>
+    </div>
+    
+    
+    
       <%= render 'posts/posts', posts: @posts %>
-    </div>
-    
-    
     
     
     
@@ -24,9 +29,16 @@
 <% else %>
   <div class="center jumbotron" style="background: url(<%= asset_path "b093.jpg" %>);">
     <div class="text-center">
-      <h1>「キレイ」も「悩み」もシェアするなら？</h1><br><br><br>
-      <a class="navbar-brand" href="/signup"><i class="far fa-edit"></i> 今日のキレイをメモする <i class="far fa-edit"></i></a><br>
-      <a class="navbar-brand" href="/signup"><i class="far fa-lightbulb"></i> みんなのメモで悩みを解消 <i class="far fa-lightbulb"></i></a>
+      <br>
+      <h1 class="top">「キレイ」も「悩み」もシェアするなら？</h1><br><br><br>
+      <p class="toppage-link">
+        <%= link_to signup_path, class: 'kirei-memo' do %>
+          <i class="far fa-edit"></i> 今日のキレイをメモする <i class="far fa-edit"></i>
+        <% end %>
+      <p class="toppage-link">
+        <%= link_to signup_path, class: 'memo-kaishou' do %>
+          <i class="far fa-lightbulb"></i> みんなのメモで悩みを解消 <i class="far fa-lightbulb"></i>
+        <% end %>
     </div>
   </div>
 <% end %>
