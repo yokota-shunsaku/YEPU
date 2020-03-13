@@ -65,3 +65,7 @@ gem 'rmagick'
 gem 'font-awesome-sass', '~> 5.4.1'
 
 gem 'rails-i18n'
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
