@@ -6,7 +6,7 @@ div.container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
@@ -41,12 +41,20 @@ input.btn.btn-primary.btn-block {
     border-color: #a178ce;
 }
 
-
+input.btn.btn-primary.btn-block:active {
+    color: #a178ce;
+    background-color: #a178ce;
+    border-color: #a178ce;
+}
 
 
 
 .dropdown-item {
     text-align: -webkit-center;
+}
+
+.dropdown-item:active {
+    background-color: #f9eef2;
 }
 
 .dropdown-item a {
@@ -133,7 +141,7 @@ p.toppage-link {
     line-height: 2.4;
 }
 
-a.kirei-memo{
+a.kirei{
     color: #52af9e;
 }
 
@@ -143,4 +151,70 @@ a.memo-kaishou{
 
 h1.top{
   word-wrap: normal;
+}
+
+.text-muted {
+    color: #efcbdb!important;
+}
+
+input.btn.btn-primary.btn-sm {
+    margin-right: 0.2rem;
+    width: 3.58rem;
+    background-color: #ef67ebad;
+    border-color: #ef67ebad;
+}
+input.btn.btn-primary.btn-sm:active {
+    background-color: #ef67ebad;
+}
+
+input.btn.btn-danger.btn-sm {
+    margin-right: 0.2rem;
+    width: 3.58rem;
+    background-color: #b390a7;
+    border-color: #b390a7;
+}
+input.btn.btn-danger.btn-sm:active {
+    background-color: #b390a7;
+}
+
+a.btn.btn-danger.btn-sm {
+    width: 3.58rem;
+    background-color: #da5c68;
+    border-color: #da5c68;
+}
+a.btn.btn-danger.btn-sm:active {
+    background-color: #da5c68;
+}
+
+
+
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f1e4f052;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.card-title {
+    text-align: -webkit-center;
+    margin-bottom: 0rem;
+}
+
+
+div.namae a {
+    color: #89468a;
+    font-size: large;
+    text-decoration: unset;
+    background-color: #3c131300;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+div.toukou {
+    margin-top: 2rem;
+    width: -webkit-fill-available;
+    text-align: -webkit-center;
 }
