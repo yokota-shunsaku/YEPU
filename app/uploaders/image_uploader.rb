@@ -47,16 +47,16 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
   
 # 画像の上限を640x480にする
-  process :resize_to_limit => [640, 480]
+  process :resize_to_limit => [275, 275]
   
+  # ファイルサイズに制限をつける
+  def size_range
+    1..2.megabytes
+  end
 =begin
 # アップローダーでどんな種類のものを受け取るか指定
   storage :file
 
-# ファイルサイズに制限をつける
-  def size_range
-    1..5.megabytes
-  end
 
 # 保存形式をJPGにする
   process :convert => 'jpg'
