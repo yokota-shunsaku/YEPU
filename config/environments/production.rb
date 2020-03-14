@@ -71,9 +71,9 @@ Rails.application.configure do
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
-  #config.i18n.fallbacks = true
+  config.i18n.fallbacks = true
   #config.i18n.fallbacks = 下のものを加える？とterminalにherokuデプロイする時に書かれた。
-  config.i18n.fallbacks = [I18n.default_locale]
+  #config.i18n.fallbacks = [I18n.default_locale]
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
@@ -94,10 +94,3 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
-
-
-# $ bin/rails assets:precompile を有効にするため
-config.assets.compile = true  # falseからtrueに変更
-
-# JavaScriptのES6に対応させるため
-config.assets.js_compressor = Uglifier.new(harmony: true)
