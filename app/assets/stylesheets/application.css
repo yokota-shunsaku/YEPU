@@ -269,3 +269,7 @@ ul.pagination {
 div.media-body div p a {
     color: #539dec;
 }
+
+div#error_explanation {
+    text-align: -webkit-auto;
+}

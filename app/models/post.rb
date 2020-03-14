@@ -6,5 +6,6 @@ class Post < ApplicationRecord
   has_many :users, through: :favorites
   
   validates :content, presence: true, length: { maximum: 255 }
+  validates :genre, presence: true
   
 end
