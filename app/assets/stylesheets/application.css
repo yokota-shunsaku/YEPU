@@ -13,8 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
 
 a.kirei-memo {
     color: #52af9e;
