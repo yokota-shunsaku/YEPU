@@ -1,24 +1,24 @@
-# README
+# アプリケーションの概要
+キレイに関するメモを記録して共有できる、キレイ投稿SNSサービス。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 技術的ポイント
 
-Things you may want to cover:
+# アプリケーションの機能
+・キレイに関するメモをを投稿
+・画像を投稿（CarrierWaveを使用）
+・フォロー
+・お気に入り登録
+・ログイン
+・バリデーション
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 環境
+■フレームワーク
+　Ruby on Rails
+■インフラ
+　
+■データベース
+　
+■アプリケーションサーバー
+　
+■Webサーバー
+　

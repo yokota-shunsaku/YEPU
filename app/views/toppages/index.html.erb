@@ -10,7 +10,6 @@
       </div>
     </div>
     
-    
     <div class="col-sm">
       <p class="form-link-memo">
         <%= link_to posts_path, class: 'kirei-memo' do %>
@@ -18,11 +17,9 @@
         <% end %>
     </div>
     
-    
     <div class="col-sm-12">
       <%= render 'posts/posts', posts: @posts %>
     </div>
-    
     
   </div>
 </div>
@@ -30,7 +27,10 @@
   <div class="center jumbotron" style="background: url(<%= asset_path "b093.jpg" %>);">
     <div class="text-center">
       <br>
-      <h1 class="top">「キレイ」も「悩み」もシェアするなら？</h1><br><br><br>
+      <h1 class="top">「キレイ」も「悩み」もシェアするなら？</h1>
+      <br>
+      <br>
+      <br>
       <p class="toppage-link">
         <%= link_to signup_path, class: 'kirei' do %>
           <i class="far fa-edit"></i> 今日のキレイをメモする <i class="far fa-edit"></i>

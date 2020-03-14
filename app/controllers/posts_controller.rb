@@ -4,25 +4,25 @@ class PostsController < ApplicationController
   
   def index
     if logged_in?
-      @post = current_user.posts.build  # form_with 用
+      @post = current_user.posts.build
     end
   end
   
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      flash[:success] = 'メッセージを投稿しました。'
+      flash[:success] = 'メモを投稿しました'
       redirect_to root_url
     else
       @posts = current_user.feed_posts.order(id: :desc).page(params[:page]).per(30)
-      flash.now[:danger] = 'メッセージの投稿に失敗しました。'
+      flash.now[:danger] = 'メモの投稿に失敗しました'
       render 'posts/index'
     end
   end
 
   def destroy
     @post.destroy
-    flash[:success] = 'メッセージを削除しました。'
+    flash[:success] = 'メモを削除しました'
     redirect_back(fallback_location: root_path)
   end
 

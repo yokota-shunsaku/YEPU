@@ -51,6 +51,7 @@ production:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: message-board_production
-  username: message-board
-  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
+  database: yepu_production
+  username: yepu
+  password: <%= ENV['YEPU_DATABASE_PASSWORD'] %>
+  

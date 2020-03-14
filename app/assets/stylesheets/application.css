@@ -16,9 +16,6 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
-
-
-
 a.kirei-memo {
     color: #52af9e;
     font-size: xx-large;
@@ -54,8 +51,6 @@ input.btn.btn-primary.btn-block:active {
     border-color: #a178ce;
 }
 
-
-
 .dropdown-item {
     text-align: -webkit-center;
 }
@@ -74,8 +69,6 @@ input.btn.btn-primary.btn-block:active {
 .dropdown-item a:hover {
     color: #442b2b !important;
 }
-
-
 
 a.nav-link:hover {
     color: #442b2b !important;
@@ -108,7 +101,7 @@ span.navbar-toggler-icon:hover {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='maroon' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
- ul .dropdown-menu.dropdown-menu-right.show {
+ul .dropdown-menu.dropdown-menu-right.show {
     margin: 0;
     border: 0;
     padding: 0;
@@ -121,12 +114,9 @@ span.navbar-toggler-icon:hover {
     border-top: 1px solid #a26667;
 }
 
-
-
 a.text-dark:focus, a.text-dark:hover {
     color: #67345c!important;
 }
-
 
 .h1, h1 {
     font-size: 2.116rem;
@@ -171,6 +161,7 @@ input.btn.btn-primary.btn-sm {
     border-color: #d85e9c;
     padding: 0;
 }
+
 input.btn.btn-primary.btn-sm:active {
     background-color: #d85e9c;
 }
@@ -182,6 +173,7 @@ input.btn.btn-danger.btn-sm {
     border-color: #b390a7;
     padding: 0;
 }
+
 input.btn.btn-danger.btn-sm:active {
     background-color: #b390a7;
 }
@@ -192,12 +184,10 @@ a.btn.btn-danger.btn-sm {
     border-color: #da5c68;
     padding: 0;
 }
+
 a.btn.btn-danger.btn-sm:active {
     background-color: #da5c68;
 }
-
-
-
 
 .card-header {
     padding: .75rem 1.25rem;
@@ -211,7 +201,6 @@ a.btn.btn-danger.btn-sm:active {
     margin-bottom: 0rem;
 }
 
-
 div.namae a {
     color: #89468a;
     font-size: large;
@@ -220,8 +209,6 @@ div.namae a {
     padding-left: 0rem;
     padding-right: 1rem;
 }
-
-
 
 div.toukou {
     margin-top: 2rem;

@@ -1,9 +1,6 @@
 class ToppagesController < ApplicationController
   def index
     if logged_in?
-    
-      #binding.pry
-      
       
       if params[:genre] == '食事' || params[:genre] == '運動' || params[:genre] == '美容'
       #そのジャンルのPost一覧を取得するコード
