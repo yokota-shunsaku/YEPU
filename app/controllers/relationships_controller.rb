@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
   def create
     user = User.find(params[:follow_id])
     current_user.follow(user)
-    flash[:success] = 'ユーザーをフォローしました'
+    flash[:success] = 'フォローしました'
     redirect_to user
   end
 
