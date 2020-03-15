@@ -11,16 +11,16 @@
         <div>
           <p class="text-break mb-0"><mark><%= post.genre %></mark></p>
           <% if post.image? %>
-            <%= image_tag post.image.url %>
+            <%= image_tag post.image.url, alt: "KIREI_image" %>
           <% end %>
         </div>
         <div class="text-break mb-0"><%= simple_format( post.content ) %></div>
         <div class="btn-toolbar">
-          <p><%= render 'favorites/like_button', post: post %></p>
-          <p><%= render 'posts/delete_button', post: post %></p>
+          <%= render 'favorites/like_button', post: post %>
+          <%= render 'posts/delete_button', post: post %>
         </div>
       </div>
     </li>
   <% end %>
-  <%= paginate posts %>
 </ul>
+<%= paginate posts %>
