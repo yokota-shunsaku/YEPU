@@ -4,7 +4,7 @@
     <div class="col-sm">
       <div class="jenre">
         <%= form_with(url: root_path, method: :get, local: true) do |f| %>
-        <%= f.select :genre, ['食事', '運動', '美容', 'Myタイムライン', 'Allジャンル'], {include_blank: 'ジャンル選択'}, class: 'form-control' %>
+        <%= f.select :genre, ['食事', '運動', '美容', 'Myタイムライン', 'Allジャンル'], {include_blank: @post}, class: 'form-control' %>
           <%= f.submit '表示する', class: 'btn btn-primary btn-block' %>
         <% end %>
       </div>

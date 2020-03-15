@@ -2,6 +2,12 @@ class ToppagesController < ApplicationController
   def index
     if logged_in?
       
+      if params[:genre]
+        @post = params[:genre]
+      else
+        @post = 'Myタイムライン'
+      end
+      
       if params[:genre] == '食事' || params[:genre] == '運動' || params[:genre] == '美容'
       #そのジャンルのPost一覧を取得するコード
         @posts = Post.where(genre: params[:genre]).order(id: :desc).page(params[:page]).per(10)
