@@ -1,0 +1,28 @@
+<% if current_user == post.user %>
+<%= form_with(model: post, local: true) do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= f.label :genre, 'ジャンル' %>
+  <%= f.select :genre, ['食事', '運動', '美容'] %>
+  
+  <%= f.label :image, '画像' %>
+  <%= f.file_field :image %>
+
+<% if f.object.image.present? %>
+<%= image_tag post.image.url, alt: "KIREI_image" %>
+<% end %>
+
+  <%= f.label :content, 'メモ' %>
+  <%= f.text_field :content %>
+
+  <%= f.submit '投稿' %>
+<% end %>
+<% end %>

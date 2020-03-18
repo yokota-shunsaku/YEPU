@@ -7,13 +7,13 @@
       <%= f.select :genre, ['食事', '運動', '美容'], {include_blank: 'ジャンル選択'}, class: 'form-control' %>
         <div class="form-group">
           <p class="gazou">
-            <%= f.label "画像をアップロード" %>
+            <%= f.label :image, '画像をアップロード' %>
             <br>
             <%= f.file_field :image %>
           </p>
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
-        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+        <%= f.submit '投稿する', class: 'btn btn-primary btn-block' %>
       <% end %>
     </div>
     </div>

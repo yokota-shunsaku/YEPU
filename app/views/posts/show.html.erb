@@ -1,0 +1,12 @@
+<h1>編集結果</h1>
+
+<p>ジャンル: <%= @post.genre %></p>
+
+<%= image_tag @post.image.url, alt: "KIREI_image" %>
+
+<p>メモ: <%= @post.content %></p>
+
+<%= link_to 'Myタイムライン へ', root_path %>
+<%= link_to 'Myプロフィール へ', user_path(@current_user) %>
+<%= link_to 'このメモを編集する', edit_post_path(@post) %>
+<%= link_to 'このメモを削除する', @post, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>

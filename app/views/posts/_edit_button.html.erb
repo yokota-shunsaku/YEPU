@@ -1,0 +1,5 @@
+<div>
+  <% if current_user == post.user %>
+    <%= link_to '編集', edit_post_path(post), class: 'btn btn-sm' %>
+  <% end %>
+</div>

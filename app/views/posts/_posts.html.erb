@@ -16,6 +16,7 @@
         </div>
         <div class="text-break mb-0"><%= simple_format( post.content ) %></div>
         <div class="btn-toolbar">
+          <%= render 'posts/edit_button', post: post %>
           <%= render 'favorites/like_button', post: post %>
           <%= render 'posts/delete_button', post: post %>
         </div>
