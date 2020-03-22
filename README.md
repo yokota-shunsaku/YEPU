@@ -1,8 +1,9 @@
 * **はじめに**  
 追加すべき機能はまだまだあります。[追加予定機能](#追加予定機能)のリストから順次アップデートをかけていく予定です。
+
 # キレイをメモしてシェアする『YEPU』
-[Heroku](https://yepu-0126.herokuapp.com/) でアプリを公開しています。  
-![CD0A82F2-4D46-4776-A879-3F5CCE2683DD](https://user-images.githubusercontent.com/61288846/77243844-1560b980-6c52-11ea-8938-9064d6a2bf86.jpeg)
+[Heroku](https://yepu-0126.herokuapp.com/) でアプリを公開しています。
+![DDF29655-E0B8-4612-8C04-035069E5286D](https://user-images.githubusercontent.com/61288846/77244877-76da5580-6c5d-11ea-9d32-b594328bfc8d.jpeg)
 
 # 概要
 キレイに関するメモを記録して共有できる、キレイ投稿SNSサービスです。
