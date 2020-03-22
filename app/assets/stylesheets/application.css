@@ -187,6 +187,18 @@ a.btn.btn-danger.btn-sm:active {
     background-color: #da5c68;
 }
 
+.btn-group-sm>.btn, .btn-sm {
+    margin-right: 0.2rem;
+    width: 3.58rem;
+    background-color: #28a745c7;
+    border-color: #28a745c7;
+    padding: 0;
+}
+
+.btn-group-sm>.btn, .btn-sm:active {
+    background-color: #28a745c7;
+}
+
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
