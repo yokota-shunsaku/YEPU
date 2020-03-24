@@ -285,3 +285,32 @@ div.media-body div p a {
 div#error_explanation {
     text-align: -webkit-auto;
 }
+
+h1.edit_top {
+    font-size: 2.116rem;
+    color: #28a745c7;
+}
+
+div.edit_change a {
+    color: #539dec;
+}
+
+.edit_genre {
+    text-align: left;
+}
+
+.edit_genre label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    background-color: #b4f37a36;
+}
+
+.edit_memo {
+    text-align: left;
+}
+
+.edit_memo label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    background-color: #b4f37a36;
+}

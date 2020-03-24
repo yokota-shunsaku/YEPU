@@ -1,6 +1,10 @@
-<h1>メモの編集</h1>
+<h1 class="edit_top" >メモの編集</h1>
+
+<div class="edit_change" >
+  <%= link_to 'Myタイムライン へ', root_path %>
+  <br>
+  <%= link_to 'Myプロフィール へ', user_path(@current_user) %>
+</div>
 
 <%= render 'form', post: @post %>
-
-<%= link_to 'Myタイムライン へ', root_path %>
-<%= link_to 'Myプロフィール へ', user_path(@current_user) %>
+<br>
