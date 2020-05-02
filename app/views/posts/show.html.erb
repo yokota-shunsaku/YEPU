@@ -1,12 +1,35 @@
-<h1>編集結果</h1>
-
-<p>ジャンル: <%= @post.genre %></p>
-
-<%= image_tag @post.image.url, alt: "KIREI_image" %>
-
-<p>メモ: <%= @post.content %></p>
-
+<div class="row">
+  <div class="toukou">
+    <div class="col-sm-8">
+        <h1 class="edit_top" >編集結果</h1>
+        <div class="edit_change" >
 <%= link_to 'Myタイムライン へ', root_path %>
+<br>
 <%= link_to 'Myプロフィール へ', user_path(@current_user) %>
+<br>
 <%= link_to 'このメモを編集する', edit_post_path(@post) %>
+<br>
 <%= link_to 'このメモを削除する', @post, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+</div>
+<br>
+<div class="edit_genre" >
+<p>
+  <label>ジャンル</label> <%= @post.genre %>
+</p>
+</div>
+<div class="form-group">
+      <p class="gazou">
+<%= image_tag @post.image.url, alt: "KIREI_image" %>
+</p>
+<div class="edit_memo" >
+    <p>
+        <label>メモ</label>
+        <br>
+        <%= @post.content %>
+        </p>
+    </div>
+</div>
+
+</div>
+  </div>
+</div>
