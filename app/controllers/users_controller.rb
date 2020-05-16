@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.order(id: :desc).page(params[:page]).per(10)
+    @search_users = User.all.page(params[:page]).search(params[:search])
   end
 
   def show
