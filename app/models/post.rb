@@ -7,5 +7,11 @@ class Post < ApplicationRecord
   
   validates :content, presence: true, length: { maximum: 255 }
   validates :genre, presence: true
-  
+  def self.search(search)   
+        if search  
+          where(['content LIKE ?', "%#{search}%"])   
+        else  
+          all  
+        end  
+  end
 end

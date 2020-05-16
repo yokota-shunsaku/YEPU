@@ -10,6 +10,16 @@
       </div>
     </div>
     
+    <div class="mt-4">
+      <p>Post search</p>  
+        <%= form_tag(root_path, :method => "get") do %>  
+      <p>  
+        <%= text_field_tag :search, params[:search] %>  
+        <%= submit_tag "Search", :content => nil %>  
+      </p>  
+      <% end %>
+    </div>
+    
     <div class="col-sm">
       <p class="form-link-memo">
         <%= link_to posts_path, class: 'kirei-memo' do %>
