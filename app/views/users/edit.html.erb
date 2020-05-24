@@ -1,3 +1,12 @@
-<div class="card-header">
-        <h3 class="card-title"><%= @user.name %></h3>
-      </div>
+<% if current_user == @user %>
+
+  <%= form_with(model: @user, local: true) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+      
+    <div class="edit_memo" ><%= f.label :profile, 'メモ' %></div>
+    <%= f.text_area :profile, class: 'form-control', rows: 5 %>
+    
+    <%= f.submit '投稿する', class: 'btn btn-primary btn-block' %>
+  <% end %>
+    
+<% end %>
