@@ -7,6 +7,8 @@
       <div class="card-header">
         <h3 class="card-title"><%= @user.name %></h3>
       </div>
+      <p><%= @user.profile %></p>
+      <%= render 'users/edit_button', user: @user %>
     </div>
     <%= render 'relationships/follow_button', user: @user %>
   </aside>
@@ -17,6 +19,26 @@
       <li class="nav-item"><a href="<%= followings_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(followings_user_path(@user)) %>">フォロー  <span class="badge badge-secondary"><%= @count_followings %></span></a></li>
       <li class="nav-item"><a href="<%= followers_user_path(@user) %>" class="nav-link <%= 'active' if current_page?(followers_user_path(@user)) %>">フォロワー  <span class="badge badge-secondary"><%= @count_followers %></span></a></li>
     </ul>
-    <%= render 'users', users: @followings %>
+    
+    <% if @followings.any? %>
+    <ul class="list-unstyled">
+      <% @followings.each do |user| %>
+      <li class="media">
+        <img class="mr-2 mb-2 rounded" src="<%= gravatar_url(user, { size: 50 }) %>" alt="">
+        <div class="media-body">
+          <div>
+            <%= user.name %>
+          </div>
+          <div>
+            <p><%= link_to 'プロフィールを見る', user_path(user) %></p>
+          </div>
+          <p><%= user.profile %></p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+    <%= paginate @followings %>
+    <% end %>
+    
   </div>
 </div>

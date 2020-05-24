@@ -7,10 +7,8 @@
       <div class="card-header">
         <h3 class="card-title"><%= @user.name %></h3>
       </div>
-      
       <p><%= @user.profile %></p>
-      <%= link_to '編集', edit_user_path(@user), class: 'btn btn-success btn-sm' %>
-      
+      <%= render 'users/edit_button', user: @user %>
     </div>
     <%= render 'relationships/follow_button', user: @user %>
   </aside>
